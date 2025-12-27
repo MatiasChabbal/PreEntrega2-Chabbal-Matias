@@ -1,0 +1,49 @@
+@use '../abstracts/mixins' as m;
+
+.section-carreras {
+  text-align: center;
+  height: 30vh;
+  padding-top: 80px;
+  width: 100%;
+  color: white;
+}
+
+.section-carreras-carousel {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.img-carreras {
+  object-fit: cover;
+  height: 30vh;
+
+  @include m.respond(sm) {
+    height: 50vh;
+  }
+}
+
+.carreras-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-carreras {
+  width: 80vw;
+  margin: 20px;
+
+  @include m.respond(sm) {
+    width: 40vw;
+  }
+
+  @include m.respond(lg) {
+    width: 30vw;
+  }
+}
+
+.card-body {
+  @include m.respond(lg) {
+    font-size: 2rem !important;
+  }
+}

@@ -1,0 +1,32 @@
+@use 'variables' as v;
+
+/* MEDIA QUERIES */
+@mixin respond($size) {
+  $bp: map-get(v.$breakpoints, $size);
+
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+/* FLEX CENTER */
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BOTÓN */
+@mixin button($bg, $radius: v.$radius-md) {
+  background-color: $bg;
+  border: none;
+  border-radius: $radius;
+  font-weight: 600;
+}
+
+/* CARD */
+@mixin card($bg, $radius: v.$radius-lg) {
+  background-color: $bg;
+  border-radius: $radius;
+  padding: v.$space-md;
+}

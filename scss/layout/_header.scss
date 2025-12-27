@@ -1,0 +1,45 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.header-section {
+  background-color: v.$bg-header;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+
+  section {
+    @extend %flex-center;
+    font-size: 2rem;
+    color: #333;
+  }
+
+  h2 {
+    font-family: 'BBH Hegarty', sans-serif;
+    font-size: 3rem;
+    margin: 10px 0;
+  }
+}
+
+.navbar {
+  background-color: v.$bg-navbar;
+  margin: 15px;
+}
+
+.navbar-nav {
+  margin-top: 15px !important;
+}
+
+.nav-link {
+  font-size: 1rem;
+
+  @include m.respond(sm) {
+    font-size: 1.5rem;
+  }
+}
+
+.active {
+  background-color: v.$primary !important;
+}

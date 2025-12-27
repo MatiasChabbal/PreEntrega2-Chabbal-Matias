@@ -1,0 +1,29 @@
+/* COLORES */
+$white: #ffffff;
+$black: #000000;
+
+$primary: #0d6efd;
+$accent: #59d0f4;
+
+$bg-header: #f8f9fa;
+$bg-navbar: #e3f2fd;
+$bg-card: #1A3D63;
+$bg-footer: #0A1931;
+
+$text-light: #F6FAFD;
+
+/* BORDES */
+$radius-sm: 8px;
+$radius-md: 15px;
+$radius-lg: 20px;
+
+/* ESPACIADOS */
+$space-sm: 10px;
+$space-md: 15px;
+$space-lg: 20px;
+
+/* BREAKPOINTS */
+$breakpoints: (
+  sm: 576px,
+  lg: 1024px
+);

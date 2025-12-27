@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as v;
+
+footer {
+  background-color: v.$bg-footer;
+  color: v.$text-light;
+  padding: 20px;
+
+  li {
+    margin: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: v.$text-light;
+    font-weight: bold;
+
+    &:hover {
+      color: v.$accent;
+    }
+  }
+}

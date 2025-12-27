@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.contact-section {
+  background-color: v.$bg-card;
+  height: 80vh;
+}
+
+.contact-card {
+  max-width: 85%;
+  background: v.$white;
+  border-radius: v.$radius-sm;
+  padding: 1.75rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+
+  @include m.respond(sm) {
+    max-width: 50%;
+  }
+
+  @include m.respond(lg) {
+    max-width: 30%;
+  }
+}
+
+.btn-submit {
+  padding: 0.75rem;
+  border-radius: v.$radius-sm;
+  font-weight: 600;
+
+  @include m.respond(sm) {
+    width: 40%;
+    margin: auto;
+  }
+
+  @include m.respond(lg) {
+    width: 30%;
+  }
+}

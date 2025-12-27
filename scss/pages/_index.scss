@@ -1,0 +1,68 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.container {
+  position: relative;
+  text-align: center;
+  height: 70vh;
+  padding-top: 80px;
+  width: 100%;
+  background-color: #0000009b;
+  color: v.$white;
+
+  @include m.respond(sm) {
+    max-width: 1024px;
+  }
+
+  @include m.respond(lg) {
+    max-width: 100vw;
+  }
+}
+
+.img-fondo {
+  width: 100%;
+  height: 70vh;
+  position: absolute;
+  background: {
+    image: url("../img/imagen-fondo.jpg");
+    size: cover;
+    repeat: no-repeat;
+    position: center;
+  }
+}
+
+.text-container {
+  @extend %flex-center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  button {
+    @include m.button(v.$accent, v.$radius-md);
+    font-size: 1.5rem;
+    padding: 5px 10px;
+  }
+}
+
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.info-card {
+  @include m.card(v.$bg-card);
+  color: v.$text-light;
+  font-size: 1.5rem;
+  margin: 10px;
+
+  h2 {
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  @include m.respond(sm) {
+    width: 40%;
+  }
+}
